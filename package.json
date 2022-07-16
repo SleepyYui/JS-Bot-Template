@@ -1,0 +1,37 @@
+{
+  "name": "JS-Bot-Template",
+  "version": "1.0.0",
+  "description": "A template for creating JavaScript Discord Bots",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node --no-warnings index.js",
+    "rfpkg": "npm update && npm ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SleepyYui/PCC3-+git"
+  },
+  "keywords": [],
+  "author": "SleepyYui",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/SleepyYui/PCC3-/issues"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "beautify.log": "^3.0.4",
+    "bufferutil": "^4.0.6",
+    "chalk": "4",
+    "colors": "^1.4.0",
+    "discord-modals": "1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^16.0.1",
+    "moment": "^2.29.1",
+    "node-gyp": "^9.1.0",
+    "ora": "5",
+    "quick.db": "7",
+    "require-all": "^3.0.0",
+    "utf-8-validate": "^5.0.9"
+  }
+}
