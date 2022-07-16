@@ -1,2 +1,2 @@
-# PCC3-
- Rework of the PCC3 Bot
+# A Discord Bot
+A DC Bot made in JS
