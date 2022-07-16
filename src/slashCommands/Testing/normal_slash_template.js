@@ -16,10 +16,10 @@ module.exports = {
 
 		{"Integer": { name: "integer_test", description: "This is a test for the Integer option", required: true }}, //to use in the code: interacton.getInteger("integer_test")
 		{"String": { name: "string_test", description: "This is a test for the String option", required: true }}, //to use in the code: interacton.getString("string_test")
-		{"User": { name: "user_test", description: "This is a test for the User option", required: false }}, //to use in the code: interacton.getUser("user_test")
-		{"Channel": { name: "channel_test", description: "This is a test for the Channel option", required: false }}, //to use in the code: interacton.getChannel("channel_test")
-		{"Role": { name: "role_test", description: "This is a test for the Role option", required: false }}, //to use in the code: interacton.getRole("role_test")
-		{"IntChoices": { name: "int_choices_test", description: "This is a test for the Integer-Choices option", required: true, choices: [["Option Name", 1], ["2 is the Value of this Option", 2]] }}, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("int_choices_test")
+		{"User": { name: "user_test", description: "This is a test for the User option", required: true }}, //to use in the code: interacton.getUser("user_test")
+		{"Channel": { name: "channel_test", description: "This is a test for the Channel option", required: true }}, //to use in the code: interacton.getChannel("channel_test")
+		{"Role": { name: "role_test", description: "This is a test for the Role option", required: true }}, //to use in the code: interacton.getRole("role_test")
+		{"IntChoices": { name: "int_choices_test", description: "This is a test for the Integer-Choices option", required: true, choices: [["Option Name", 1], ["2 is the Value of this Option", 2]] }}, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("int_choices_test") //WARNING: Do not use. This option is really buggy!
 		{"StringChoices": { name: "str_choices_test", description: "This is a test for the String-Choices option", required: true, choices: [["name", "choice_id"], ["Example Name", "example_id"]] }}, //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("str_choices_test")
 	
   ],
@@ -34,14 +34,14 @@ module.exports = {
 
 		const { guild } = member;
 
-		//let Optionname = options.getString("OPTIONNAME"); //same as in StringChoices //RETURNS STRING //Valid get's are: getString, getInteger, getUser, getChannel, getRole, getIntChoices, getStringChoices
+		//let Optionname = options.getString("OPTIONNAME"); //same as in StringChoices //RETURNS STRING //Valid get's are: getString, getInteger, getUser, getChannel, getRole
 		let Integer_Test = options.getInteger("integer_test");
 		let String_Test = options.getString("string_test");
 		let User_Test = options.getUser("user_test");
 		let Channel_Test = options.getChannel("channel_test");
 		let Role_Test = options.getRole("role_test");
-		let IntChoices_Test = options.getIntChoices("int_choices_test");
-		let StringChoices_Test = options.getStringChoices("str_choices_test");
+		let IntChoices_Test = options.getInteger("int_choices_test");
+		let StringChoices_Test = options.getString("str_choices_test");
 
 		await interaction.reply({content: `This is a Test\nInteger: ${Integer_Test}\nString: ${String_Test}\nUser: ${User_Test.id}\nChannel: ${Channel_Test.name}\nRole: ${Role_Test.id}\nInteger Choices: ${IntChoices_Test}\nString Choices: ${StringChoices_Test}`, ephemeral: true}); 
 
