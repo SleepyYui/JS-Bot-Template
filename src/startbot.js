@@ -46,7 +46,7 @@ client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
 client.slashCommands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-client.categories = require("fs").readdirSync(`./src/commands`);
+// client.categories = require("fs").readdirSync(`./src/commands`);
 
 //Require the Handlers                  Add the antiCrash file too, if its enabled
 

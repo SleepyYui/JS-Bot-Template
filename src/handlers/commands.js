@@ -5,7 +5,7 @@ const Logger = require('./logger');
 Logger.info("Loading YSH");
 module.exports = (client) => {
     try {
-        let amount = 0;
+        /* let amount = 0;
         readdirSync("./src/commands/").forEach((dir) => {
             const commands = readdirSync(`./src/commands/${dir}/`).filter((file) => file.endsWith(".js"));
             for (let file of commands) {
@@ -19,8 +19,9 @@ module.exports = (client) => {
                 }
                 if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
             }
-        });
-        Logger.info(`Loaded ${amount} commands.`);
+        }); */
+        Logger.info(`"Normal" Commands are disabled, to change that edit \`src/handlers/commands.js\`.`);
+        // Logger.info(`Loaded ${amount} commands.`);
     } catch (e) {
         Logger.error(`Error loading commands.`, `${e}`);
     }
